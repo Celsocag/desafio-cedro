@@ -1,0 +1,78 @@
+@import "../../../../styles/shared-styles.scss";
+
+.tela3-container {
+  margin: 30px auto;
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+
+
+  .perfil-title {
+    color: $color-txt-purple;
+    margin: 30px 0;
+  }
+
+  .form-row {
+    justify-content: space-between;
+    padding: 0 15px;
+    flex-wrap: wrap;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      color: $color-text-weak;
+      font-weight: 600;
+      font-size: 12px;
+      margin: 30px 0;
+
+      .perfil-form-options {
+        label {
+          text-align: left;
+          width: 20vw;
+          padding: 0 10px;
+          min-width: 200px;
+
+        }
+      }
+
+      .perfil-form-select {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+
+        select {
+          border: none;
+          border-bottom: 1px solid $color-text-weak;
+          color: $color-text-weak;
+
+          &:active {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+
+  .btn {
+    border: none;
+    width: 10%;
+    min-width: 90px;
+
+    &-primary {
+      background-color: $color-bg-btn;
+      pointer-events: none;
+      opacity: 0.8;
+      &.active {
+        pointer-events: all;
+        opacity: 1;
+      }
+    }
+
+
+  }
+}

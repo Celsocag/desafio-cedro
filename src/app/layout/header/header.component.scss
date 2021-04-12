@@ -1,0 +1,28 @@
+@import '../../styles/shared-styles.scss';
+
+
+.home-header {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  text-align: center;
+  z-index: 1;
+  justify-content: left;
+
+  a {
+
+    h2,
+    span {
+      color: white;
+    }
+
+  }
+
+}
+
+.fake-header {
+  height: 91px;
+  width: 100vw;
+}

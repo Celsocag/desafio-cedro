@@ -1,0 +1,50 @@
+<div class="tela3-container container">
+
+      <div class="perfil-title">
+        <h2>Perfil do investidor - Questionário</h2>
+      </div>
+  <form [formGroup]="perfilForm"  action="">
+    <ul>
+      <li  *ngFor="let pergunta of perguntasForm; index as i">
+        <strong>{{i+1}}. </strong>
+        <span>{{pergunta.pergunta}}
+        </span>
+        <div class="form-row d-flex mt-3">
+          <div class="perfil-form-options"
+            *ngFor="let item of pergunta.opcoes">
+            <input required id="{{pergunta.key}}" name="{{pergunta.key}}"
+            formControlName="{{pergunta.key}}"
+            value="{{item}}"
+            type="radio">
+            <label >{{item}}</label>
+          </div>
+        </div>
+        <hr>
+      </li>
+      <li>
+        <strong>4. </strong><span>Qual sua familiaridade com os tipos de investimentos abaixo ?<br>
+          Leve em consideração o valor aplicado nos últimos 2 anos.</span>
+          <div class="perfil-form-select mt-3">
+            <div class="mb-3" *ngFor="let option of pergunta4 ; index as i">
+              <label  for="option{{i}}">{{option.pergunta}}</label><br>
+              <select required formControlName="{{option.key}}" id="option{{i}}">
+                <option selected value=""><span>Selecione uma Opção</span></option>
+                <option *ngFor="let item of option.opcoes ; index as p " value="{{item}}">
+                  <span>{{item}}</span>
+                </option>
+              </select>
+            </div>
+          </div>
+      </li>
+    </ul>
+
+
+          <button routerLink="/tela4"
+          (click)="onSubmit()"
+          [ngClass]="{active: perfilForm.valid  && perfilForm.touched }"
+          type="button" [disabled]="!perfilForm.valid && !perfilForm.touched " class="btn btn-primary mt-4" value="Salvar">Salvar</button>
+          <a routerLink="">
+          <button class="btn btn-secondary mt-4 ml-2">Cancelar</button>
+          </a>
+  </form>
+</div>

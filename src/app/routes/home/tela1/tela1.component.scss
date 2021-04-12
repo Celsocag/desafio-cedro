@@ -1,0 +1,52 @@
+@import "../../../styles/shared-styles.scss";
+
+.tela1-container {
+  min-height: 100vh;
+  margin: 30px auto;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+
+  section {
+    padding: 30px;
+
+    .info-title {
+      margin-bottom: 30px;
+      .info-icon {
+        background-image: url("../../../../assets/icons/note-icon.png");
+        background-repeat: no-repeat;
+        background-size: 70px;
+        width: 100px;
+        height: 75px;
+        background-position: 10px 0px;
+        margin: 0 auto;
+
+      }
+
+      span {
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $color-text-weak;
+      }
+    }
+
+    p {
+      color: $color-text-weak;
+      font-weight: 600;
+    }
+  }
+  .selecao-btn{
+    justify-content: center;
+    button{
+      border: 1px solid $color-text-weak;
+      padding: 15px 40px;
+      border-radius: 5px;
+      margin: 0 15px;
+      span{
+        color: $color-text-weak;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,41 @@
+// Variables
+
+$color-text-strong : #8b8b8b;
+$color-text-weak : #acacac;
+$color-body-bg : #d4d4d4;
+$color-header : #0a008f;
+$color-bg-btn : #d4d100;
+$color-txt-purple: #2a013d;
+// Shared Styles
+body{
+  background-color: $color-body-bg;
+  overflow-x: hidden;
+}
+
+h2{
+  font-size: 25px;
+  font-weight: 600;
+}
+h3{
+  font-size: 20px;
+  font-weight: 600;
+}
+span, p {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+@media (max-width: 380px) {
+  h2{
+    font-size: 18px;
+    font-weight: 600;
+  }
+  h3{
+    font-size: 15px;
+    font-weight: 600;
+  }
+  span, p {
+    font-size: 12px;
+    font-weight: 500;
+  }
+}

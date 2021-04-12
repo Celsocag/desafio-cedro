@@ -1,0 +1,31 @@
+<div class="tela2-modal"
+>
+</div>
+<div class="card col-xl-5 md-6 col-sm-8 col-11">
+  <div class="card-body">
+    <h4 class="card-title text-center">
+    <span (click)="FunctionHideModal()"  class="modal-close">X</span>
+
+      Termo</h4>
+    <hr>
+    <strong class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+      been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+      scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+      electronic typesetting, remaining essentially unchanged.
+    </strong>
+    <br>
+    <hr>
+    <div [formGroup]="termoForm" class="checkbox-termos--container">
+        <input formControlName="checkBox" id="checkbox-termos" type="checkbox">
+        <label (click)="validadteForm()" for="checkbox-termos">Li e aceito os termos e condições acima.</label>
+      <div class="card-buttons">
+        <a routerLink="{{urlBtn}}">
+        <button>
+          <span>Ok, entendi.</span>
+        </button>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
